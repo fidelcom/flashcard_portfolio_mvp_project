@@ -16,6 +16,16 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('subject.index')" :active="request()->routeIs('subject.index')">
+                        {{ __('Subjects') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('card.index')" :active="request()->routeIs('card.index') || request()->routeIs('card.create') || request()->routeIs('card.edit')">
+                        {{ __('Flash Cards') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->
